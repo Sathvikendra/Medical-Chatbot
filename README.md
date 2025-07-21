@@ -26,3 +26,23 @@ PINECONE_API_KEY="xxxxxxxxxxxxxxxx"
 PINECONE_API_ENV="xxxxxxx"
 '''
 
+'''bash
+python store_index.py
+'''
+
+'''bash
+python app.py
+'''
+
+Now
+'''bash
+open up localhost:
+'''
+
+# Techstack Used:
+
+- Python
+- Langchain
+- Flask
+- Meta Llama
+- Pinecone

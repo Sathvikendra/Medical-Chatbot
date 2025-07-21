@@ -7,3 +7,6 @@ PyPDF
 huggingface_hub==0.16.4
 langchain-pinecone
 langchain-community
+python-dotenv
+
+-e .
