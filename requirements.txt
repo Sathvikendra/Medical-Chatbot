@@ -3,3 +3,7 @@ sentence-transformers==2.2.2
 pinecone-client
 langchain==0.0.225
 flask
+PyPDF
+huggingface_hub==0.16.4
+langchain-pinecone
+langchain-community
