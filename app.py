@@ -10,9 +10,6 @@ from langchain_pinecone import PineconeVectorStore
 from dotenv import load_dotenv
 from src.prompt import *
 import os
-# from langchain.chains.retrieval import create_retrieval_chain
-# from langchain.chains.combine_documents import create_stuff_documents_chain
-# from langchain_core.prompts import ChatPromptTemplate
 
 app=Flask(__name__)
 load_dotenv()
@@ -24,7 +21,7 @@ embeddings=download_huggingface_embedding()
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index_name="medical-chatbot"
-index = pc.Index(index_name)
+
 
 if index_name not in pc.list_indexes().names():
     pc.create_index(
@@ -36,7 +33,7 @@ if index_name not in pc.list_indexes().names():
             region="us-east-1"
         )
     )
-
+index = pc.Index(index_name)
 docsearch=PineconeVectorStore.from_existing_index(index_name=index_name,embedding=embeddings)
 
 prompt=PromptTemplate(template=prompt_template,input_variables=["context","question"])
