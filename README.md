@@ -1,45 +1,48 @@
 # Medical-Chatbot
 Medical Chatbot using Llama
 
-#Steps to run the project
+### Steps to run the project
 
 Clone the repository
 
-'''bash
+```bash
 conda create -n mchatbot python=3.8 -y
-'''
+```
 
-'''bash
+```bash
 conda activate mchatbot
-'''
+```
 
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 
 Download Llama model
+
 https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML/tree/main
 
 Create a .env file in root directory and add Pinecone credentials
-'''ini
+
+```ini
 PINECONE_API_KEY="xxxxxxxxxxxxxxxx"
 PINECONE_API_ENV="xxxxxxx"
-'''
+```
 
-'''bash
+```bash
 python store_index.py
-'''
+```
 
-'''bash
+```bash
 python app.py
-'''
+```
 
-Now
-'''bash
+Now, 
+
+```bash
 open up localhost:
-'''
+```
 
-# Techstack Used:
+### Techstack Used:
 
 - Python
 - Langchain

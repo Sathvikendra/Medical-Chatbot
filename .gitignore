@@ -208,3 +208,5 @@ __marimo__/
 
 
 model/llama-2-13b-chat.ggmlv3.q6_K.bin
+
+.vscode
